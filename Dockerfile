@@ -7,13 +7,11 @@ RUN \
         jq xml-twig-tools && \
  echo "**** install sonarr ****" && \
  RADAR_VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/Radarr/Radarr/releases/latest | awk -F / '{print $NF}') && \
- curl -L https://github.com/Radarr/Radarr/archive/${RADAR_VERSION}.tar.gz \
-        -o /opt/radarr.tar.gz && \
+ curl -L -o /opt/radarr.tar.gz https://github.com/Radarr/Radarr/archive/${RADAR_VERSION}.tar.gz && \
  cd /opt && \
  tar zxvf radarr.tar.gz && \
  rm radarr.tar.gz && \
- RADARR_DIR=$(ls | grep Radarr*)
- cd $RADARR_DIR && \
+ RADARR_DIR=$(ls | grep Radarr*) && \
  echo "**** cleanup ****" && \
  apt-get autoremove -y && apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
