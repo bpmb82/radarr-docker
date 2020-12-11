@@ -24,7 +24,7 @@ COPY start.sh .
 COPY healtcheck.sh .
 RUN chmod +x *.sh
 
-EXPOSE 8989
+EXPOSE 7878
 VOLUME /config
 
 HEALTHCHECK --interval=5m --timeout=5s \
