@@ -21,7 +21,7 @@ RUN \
 
 WORKDIR /opt
 COPY start.sh .
-COPY healtcheck.sh .
+COPY healthcheck.sh .
 RUN chmod +x *.sh
 
 EXPOSE 7878
