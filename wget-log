@@ -1,0 +1,21 @@
+--2020-12-11 22:13:33--  https://radarr.servarr.com/v1/update/master/updatefile?os=linux
+Resolving radarr.servarr.com (radarr.servarr.com)... 2606:4700:e0::ac40:671a, 2606:4700:e0::ac40:661a, 172.64.103.26, ...
+Connecting to radarr.servarr.com (radarr.servarr.com)|2606:4700:e0::ac40:671a|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://github.com/Radarr/Radarr/releases/download/v3.0.1.4259/Radarr.master.3.0.1.4259.linux.tar.gz [following]
+--2020-12-11 22:13:34--  https://github.com/Radarr/Radarr/releases/download/v3.0.1.4259/Radarr.master.3.0.1.4259.linux.tar.gz
+Resolving github.com (github.com)... 140.82.121.4
+Connecting to github.com (github.com)|140.82.121.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-production-release-asset-2e65be.s3.amazonaws.com/77323220/e4584a00-3b3c-11eb-886c-b627c41a7fcf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201211%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201211T211334Z&X-Amz-Expires=300&X-Amz-Signature=1fd40513b525d075ea6784ac00225b1f903460ccbca13f256a7163012801b9f7&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=77323220&response-content-disposition=attachment%3B%20filename%3DRadarr.master.3.0.1.4259.linux.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2020-12-11 22:13:34--  https://github-production-release-asset-2e65be.s3.amazonaws.com/77323220/e4584a00-3b3c-11eb-886c-b627c41a7fcf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201211%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201211T211334Z&X-Amz-Expires=300&X-Amz-Signature=1fd40513b525d075ea6784ac00225b1f903460ccbca13f256a7163012801b9f7&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=77323220&response-content-disposition=attachment%3B%20filename%3DRadarr.master.3.0.1.4259.linux.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)... 52.216.24.36
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)|52.216.24.36|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 19282207 (18M) [application/octet-stream]
+Saving to: ‘updatefile?os=linux’
+
+updatefile?os=linux                       0%[                                                                               ]       0  --.-KB/s               updatefile?os=linux                       0%[                                                                               ]  58.55K   271KB/s               updatefile?os=linux                       1%[>                                                                              ] 296.55K   679KB/s               updatefile?os=linux                       6%[====>                                                                          ]   1.24M  1.87MB/s               updatefile?os=linux                      26%[====================>                                                          ]   4.95M  5.75MB/s               updatefile?os=linux                      51%[=======================================>                                       ]   9.48M  8.94MB/s               updatefile?os=linux                      78%[============================================================>                  ]  14.42M  11.4MB/s               updatefile?os=linux                     100%[==============================================================================>]  18.39M  13.0MB/s    in 1.4s    
+
+2020-12-11 22:13:36 (13.0 MB/s) - ‘updatefile?os=linux’ saved [19282207/19282207]
+

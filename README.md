@@ -1,3 +1,5 @@
 # radarr-docker
 
-Sonarr docker image based on debian-slim, updated weekly with included health check
+Radarr image, updated weekly, running the latest stable version of Radarr.. 
+
+Automatically grabs the API key to do a healthcheck
