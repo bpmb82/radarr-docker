@@ -6,13 +6,13 @@ RUN \
  apt-get install -y \
         jq xml-twig-tools && \
  echo "**** install sonarr ****" && \
- RADAR_VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/Radarr/Radarr/releases/latest | awk -F / '{print $NF}') && \
- curl -L -o /opt/radarr.tar.gz https://github.com/Radarr/Radarr/archive/${RADAR_VERSION}.tar.gz && \
+ RADARR_VERSION=$(curl -sL "https://radarr.servarr.com/v1/update/master/changes?os=linux" | jq -r '.[0].version') && \
+ curl -L -o /opt/radarr.tar.gz https://github.com/Radarr/Radarr/releases/download/v$RADARR_VERSION/Radarr.master.$RADARR_VERSION.linux-core-x64.tar.gz && \
  cd /opt && \
  tar zxvf radarr.tar.gz && \
  rm radarr.tar.gz && \
- RADARR_DIR=$(ls | grep Radarr*) && \
  echo "**** cleanup ****" && \
+ apt-get -y remove jq && \
  apt-get autoremove -y && apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
  rm -rf \
