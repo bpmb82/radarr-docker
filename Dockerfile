@@ -4,7 +4,7 @@ RUN \
  echo "**** install packages ****" && \
  apt-get update && \
  apt-get install -y \
-        jq xml-twig-tools && \
+        jq xml-twig-tools icu-devtools && \
  echo "**** install sonarr ****" && \
  RADARR_VERSION=$(curl -sL "https://radarr.servarr.com/v1/update/master/changes?os=linux" | jq -r '.[0].version') && \
  curl -L -o /opt/radarr.tar.gz https://github.com/Radarr/Radarr/releases/download/v$RADARR_VERSION/Radarr.master.$RADARR_VERSION.linux-core-x64.tar.gz && \
