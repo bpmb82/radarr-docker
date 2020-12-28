@@ -4,6 +4,12 @@
 
 APP=radarr
 
+# Only start running if db file is found
+
+FILE=/config/$APP.db
+
+until test -f $FILE; do echo "SQLite Backup Script [Info] No database file detected yet, sleeping for 5 minutes.." >> /proc/1/fd/1 && sleep 300; done
+
 # Loop forever and sleep 24 hours after each backup
 
 while true
@@ -32,12 +38,12 @@ else
   echo "$DATETIME SQLite Backup Script [Info] Backup made successfully.." >> /proc/1/fd/1
 fi
 
-# Keep last 90(!) backups
+# Keep last 30 backups
 
-if [ $NO_BACKUPS -gt 90 ]; then
+if [ $NO_BACKUPS -gt 30 ]; then
   REMOVEFILE=$(ls -t $DESTINATION | tail -1)
   rm -f $DESTINATION$REMOVEFILE
-  echo "$DATETIME SQLite Backup Script [Info] Removed backups from more than 90 days ago.." >> /proc/1/fd/1
+  echo "$DATETIME SQLite Backup Script [Info] Removed backups from more than 30 days ago.." >> /proc/1/fd/1
 else
   echo "$DATETIME SQLite Backup Script [Info] We now have $NO_BACKUPS backups so nothing to remove!" >> /proc/1/fd/1
 fi
